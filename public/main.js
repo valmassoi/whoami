@@ -24,6 +24,6 @@ app.get("*", function(req, res) {
   res.writeHead(200, { "Content-Type": "text/plain" });
   res.end("404!");
 });
-
-http.createServer(app).listen(8080);
+var port = process.env.PORT || 8080;
+http.createServer(app).listen(port);
 console.log("Server Running");
